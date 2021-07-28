@@ -1,0 +1,4 @@
+flask
+numpy==1.18
+pandas
+pillow==5.1.0
