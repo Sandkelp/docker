@@ -6,6 +6,5 @@ COPY . .
 
 RUN pip install -r requirements.txt -v
 
-ENTRYPOINT ["python"
-CMD [wikiApp.py]
+CMD python wikiApp.py
 
