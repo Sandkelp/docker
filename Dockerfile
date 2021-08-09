@@ -1,10 +1,16 @@
 FROM python:3
 
-WORKDIR /wikiApp
+RUN mkdir /wikiApp1/
 
-COPY . .
+WORKDIR /wikiApp1/
 
+COPY ./requirements.txt /wikiApp1/requirements.txt
 RUN pip install -r requirements.txt -v
 
-CMD python wikiApp.py
+COPY ./ /wikiApp1/
 
+ENV FLASK_APP=wiki-app.py
+CMD flask run -h 0.0.0 -p 5000
+
+
+#FLASK_APP=wikiApp:name
